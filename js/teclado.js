@@ -14,28 +14,24 @@ export function moveBall(e) {
   const limitsStage = $stage.getBoundingClientRect();
 
   const casoLeft = () => {
-    e.preventDefault();
     if (limitsBall.left > limitsStage.left) {
       x--;
     }
   };
 
   const casoUp = () => {
-    e.preventDefault();
     if (limitsBall.top > limitsStage.top) {
       y--;
     }
   };
 
   const casoRight = () => {
-    e.preventDefault();
     if (limitsBall.right < limitsStage.right) {
       x++;
     }
   };
 
   const casoDown = () => {
-    e.preventDefault();
     if (limitsBall.bottom < limitsStage.bottom) {
       y++;
     }
@@ -46,15 +42,19 @@ export function moveBall(e) {
   if (e.type === "keydown") {
     switch (e.keyCode) {
       case 37:
+        e.preventDefault();
         casoLeft();
         break;
       case 38:
+        e.preventDefault();
         casoUp();
         break;
       case 39:
+        e.preventDefault();
         casoRight();
         break;
       case 40:
+        e.preventDefault();
         casoDown();
         break;
       default:
@@ -76,7 +76,6 @@ export function moveBall(e) {
     if (e.target.textContent === "ABAJO") {
       casoDown();
     }
-
     cambiarBall();
   }
 }
