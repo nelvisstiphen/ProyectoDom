@@ -15,10 +15,11 @@ d.addEventListener("DOMContentLoaded", (e) => {
     "#desactivar-alarma"
   );
   scrollTopBotton(".scroll-top-btn");
-  darkTheme(".dark-theme-btn", "dark-mode");
 });
 
 d.addEventListener("keydown", (e) => {
   shortcuts(e);
   moveBall(e);
 });
+
+darkTheme(".dark-theme-btn", "dark-mode");
