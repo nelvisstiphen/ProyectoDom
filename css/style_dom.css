@@ -238,7 +238,7 @@ img {
 
 /*  FONDO ANIMADO  */
 
-.bg-container {
+.container-bg {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -254,9 +254,11 @@ img {
   position: relative;
   width: 30px;
   height: 30px;
-  /*background-color: aqua;*/
-  margin: 0 4px;
+  /*background-color: aqua;
+  margin: 0 4px;  
   border-radius: 50%;
+  */
+
   /*box-shadow: 0 0 0 10px #222222, 0 0 50px aqua, 0 0 100px aqua;*/
   animation: animate 15s linear infinite;
   animation-duration: calc(125s / var(--i));
