@@ -26,6 +26,39 @@ body {
   overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+  width: 0.75em;
+  background-color: black;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 100vw;
+  /*margin-block: 0.5em;*/
+  margin-inline: 1em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(192, 100%, 50%);
+  border-radius: 100vw;
+  /* border: 0.12em solid hsl(192, 100%, 50%); */
+}
+
+/* ::-webkit-scrollbar-thumb:hover {
+  
+} */
+
+button {
+  background-color: var(--main-color);
+  padding: 7px;
+  border-radius: 10px;
+  background-color: var(--main-color);
+  font-family: sans-serif;
+  font-weight: bold;
+  border: 2px solid var(--second-color);
+  box-shadow: 4px 4px 10px var(--second-color);
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -87,6 +120,7 @@ img {
   justify-content: center;
   align-items: center;
   background-color: var(--main-color);
+  cursor: auto;
 }
 
 .menu {
@@ -120,6 +154,7 @@ img {
   display: flex;
   min-height: 50vh;
   background-color: var(--second-color);
+  box-shadow: 1px 1px 7px var(--main-color), -1px -1px 7px var(--main-color);
 }
 
 .ball {
@@ -130,8 +165,7 @@ img {
 }
 
 .container-btn-ball {
-  width: 100%;
-  margin-top: 50px;
+  padding: 40px;
 }
 
 .container-btn-ball > div {
@@ -139,16 +173,9 @@ img {
 }
 
 .btn-ball {
+  width: 90px;
+  height: 50px;
   margin: 7px;
-  border: none;
-  border-radius: 7px;
-  width: 100px;
-  height: 35px;
-  background-color: var(--main-color);
-  font-family: sans-serif;
-  font-weight: bold;
-  border: 2px solid black;
-  box-shadow: 4px 4px 10px black;
 }
 
 /*  ScrollTopBotton   */
@@ -207,4 +234,44 @@ img {
 .dark-mode {
   background-color: var(--second-color);
   color: var(--main-color);
+}
+
+/*  FONDO ANIMADO  */
+
+.bg-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bubbles {
+  position: relative;
+  display: flex;
+}
+
+.bubbles span {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  /*background-color: aqua;*/
+  margin: 0 4px;
+  border-radius: 50%;
+  /*box-shadow: 0 0 0 10px #222222, 0 0 50px aqua, 0 0 100px aqua;*/
+  animation: animate 15s linear infinite;
+  animation-duration: calc(125s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+  /* background-color: red;
+  box-shadow: 0 0 0 10px #5e0000, 0 0 50px red, 0 0 100px red; */
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+  100% {
+    transform: translateY(-10vh) scale(2);
+  }
 }
