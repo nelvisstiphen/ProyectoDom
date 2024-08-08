@@ -248,25 +248,16 @@ img {
 .bubbles {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .bubbles span {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  /*background-color: aqua;
-  margin: 0 4px;  
-  border-radius: 50%;
-  */
-
-  /*box-shadow: 0 0 0 10px #222222, 0 0 50px aqua, 0 0 100px aqua;*/
+  border-radius: 100%;
+  background-color: none;
+  box-shadow: 0 0 10px #222222, 0 0 50px red, 0 0 100px red;
   animation: animate 15s linear infinite;
   animation-duration: calc(125s / var(--i));
-}
-
-.bubbles span:nth-child(even) {
-  /* background-color: red;
-  box-shadow: 0 0 0 10px #5e0000, 0 0 50px red, 0 0 100px red; */
 }
 
 @keyframes animate {
