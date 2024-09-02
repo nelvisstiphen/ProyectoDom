@@ -17,6 +17,7 @@
   <meta property="og:url" name="twitter:url" content="https://app-dom-test.netlify.app/">
   <meta property="og:description" name="twitter:description" content="App Manejo del DOM">
   <meta property="og:type" content="website"> 
+  <script src="https://kit.fontawesome.com/4b4c06747c.js" crossorigin="anonymous"></script>
 </head>
 <body data-dark>
   <header class="header">
@@ -29,15 +30,25 @@
     </button>
     <aside class="panel">
       <nav class="menu">
-        <a href="#seccion1">Reloj Digital y Alarma Sonora</a>
-        <a href="#seccion2">Eventos del Teclado y Click</a>
-        <a href="#seccion3">seccion 3</a>
-        <a href="#seccion4">seccion 4</a>
-        <a href="#seccion5">seccion 5</a>
+        <a href="#seccion1" data-scroll-spy>Reloj Digital y Alarma Sonora</a>
+        <a href="#seccion2" data-scroll-spy>Eventos del Teclado y Click</a>
+        <a href="#seccion3" data-scroll-spy>Responsive Tester</a>
+        <a href="#seccion4" data-scroll-spy>Deteccion Camara Web <i>(Inactivo)</i></a>
+        <a href="#seccion5" data-scroll-spy>Filtro de busqueda</a>
+        <a href="#seccion6" data-scroll-spy>Sorteo Digital</a>
+        <a href="#seccion7" data-scroll-spy>Responsive Slider</a>
+        <a href="#seccion8" data-scroll-spy>Video Inteligente</a>
+        <a href="#seccion10" data-scroll-spy>Narrador</a>
+        <a href="#seccion9" data-scroll-spy>Validaciones de Formulario</a>
+        <a href="/crud_ajax.html" data-scroll-spy>CRUD AJAX</a>
+        <a href="/crud_fetch.html" data-scroll-spy>CRUD FETCH</a>
+        <a href="/crud_axios.html" data-scroll-spy>CRUD AXIOS</a>
+        
+        
       </nav>
     </aside>
     <main>
-      <div class="container-bg">
+      <!-- <div class="container-bg">
         <div class="bubbles">
           <span style="--i:11;">❤️</span>
           <span style="--i:12;">💖</span>
@@ -60,7 +71,7 @@
           <span style="--i:13;">❤️</span>
           <span style="--i:28;">💖</span>
         </div>
-      </div> 
+      </div> -->
       <!-- <div class="container-bg">
         <div class="bubbles">
           <span style="--i:11;">⭐</span>
@@ -85,7 +96,7 @@
           <span style="--i:28;">⭐</span>
         </div>
       </div> -->
-      <section id="seccion1" class="section">
+      <section id="seccion1" class="section" data-scroll-spy>
         <h2>Reloj Digital y Alarma Sonora</h2>
         <div id="reloj"></div>
         <div>
@@ -95,7 +106,7 @@
           <button id="desactivar-alarma">Detener Alarma</button>
         </div>
       </section>
-      <section id="seccion2" class="section">
+      <section id="seccion2" class="section" data-scroll-spy>
         <h2>Eventos del Teclado y Click</h2>
         <article class="stage">
           <div class="ball"></div>
@@ -113,14 +124,163 @@
         </div>
         
       </section>
-      <section id="seccion3" class="section">
-        <h2>Sección 3</h2>
+      <section id="seccion3" class="section" data-scroll-spy>
+        <h2>Reponsive Tester</h2>
+        <form id="responsive-tester">
+          <input name="direccion" type="url" placeholder="URL" required>
+          <br>
+          <input name="ancho" type="text" placeholder="Ancho" required>
+          <br>
+          <input name="alto" type="text" placeholder="Alto" required>
+          <br>
+          <input name="probar" type="submit" value="Probar">
+          <input name="cerrar" type="button" value="Cerrar">
+        </form>
       </section>
-      <section id="seccion4" class="section">
-        <h2>Sección 4</h2>
+      <section id="seccion4" class="section" data-scroll-spy>
+        <h2>Deteccion de la camara web <i>(Inactivo)</i></h2>
+        <video id="webcam"></video>
       </section>
-      <section id="seccion5" class="section">
-        <h2>Sección 5</h2>
+      <section id="seccion5" class="section" data-scroll-spy>
+        <h2>Filtro de busqueda</h2>
+        <input type="search" placeholder="Buscar..." class="card-filter">
+        <article class="cards" >
+          <div class="card">
+            <p>😀</p>
+            <p>Cara Sonriendo</p>
+          </div>
+            <div class="card">
+              <p>😃</p>
+              <p>Cara Sonriendo Con Ojos Grandes</p>
+            </div>
+            <div class="card">
+              <p>😄</p>
+              <p>Cara Sonriendo Con Ojos Sonrientes</p>
+            </div>
+            <div class="card">
+              <p>😁</p>
+              <p>Cara Radiante Con Ojos Sonrientes</p>
+            </div>
+            <div class="card">
+              <p>😆</p>
+              <p>Cara Sonriendo Con Los Ojos Cerrados</p>
+            </div>
+            <div class="card">
+              <p>😅</p>
+              <p>Cara Sonriendo Con Sudor Frío</p>
+            </div>
+            <div class="card">
+              <p>🤣</p>
+              <p>Cara Revolviéndose De La Risa</p>
+            </div>
+            <div class="card">
+              <p>😂</p>
+              <p>Cara Llorando De Risa</p>
+            </div>
+            <div class="card">
+              <p>🙂</p>
+              <p>Cara Sonriendo Ligeramente</p>
+            </div>
+            <div class="card">
+              <p>😉</p>
+              <p>Cara Guiñando El Ojo</p>
+            </div>
+            <div class="card">
+              <p>😊</p>
+              <p>Cara Feliz Con Ojos Sonrientes</p>
+            </div>
+            <div class="card">
+              <p>😇</p>
+              <p>Cara Sonriendo Con Aureola</p>
+            </div>
+            <div class="card">
+              <p>🥰</p>
+              <p>Cara Sonriendo Con Corazones</p>
+            </div>
+            <div class="card">
+              <p>😍</p>
+              <p>Cara Sonriendo Con Ojos De Corazón</p>
+            </div>
+        </article>
+      </section>
+      <section id="seccion6" class="section" data-scroll-spy>
+        <h2>Sorteo Digital</h2>
+        <ul class="players">
+          <li class="player">JavaScript</li>
+          <li class="player">PHP</li>
+          <li class="player">JAVA</li>
+          <li class="player">C</li>
+          <li class="player">Python</li>
+          <li class="player">Ruby</li>
+          <li class="player">Go</li>
+          <li class="player">Visual Basic</li>
+          <li class="player">Rust</li>
+          <li class="player">Perl</li>
+        </ul>
+        <button id="winner-btn">Obtener Ganador</button>
+      </section>
+      <section id="seccion7" class="section" data-scroll-spy>
+        <h2>Responsive Slider</h2>
+        <div class="slider">
+          <div class="slider-slides">
+            <div class="slider-slide active">
+              <img src="https://img.freepik.com/foto-gratis/personaje-estilo-anime-espacio_23-2151134190.jpg?w=740&t=st=1723591051~exp=1723591651~hmac=9944d23c6352e103be54350135606be2ac17339c83061debf8f195fc1a4654fd" alt="">
+            </div>
+            <div class="slider-slide">
+              <img src="https://img.freepik.com/fotos-premium/nina-anime-elegante-acogedora-ilustracion-capucha_1198884-27185.jpg?w=740" alt="">
+            </div>
+            <div class="slider-slide">
+              <img src="https://img.freepik.com/foto-gratis/personaje-anime-ilustracion-dragon_23-2151117622.jpg?w=740&t=st=1723591022~exp=1723591622~hmac=fd3c943c474712e37db14d0b826c2cf34eded3fc951da9e8df0d34fd98716552" alt="">
+            </div>
+            <div class="slider-slide">
+              <img src="https://img.freepik.com/foto-gratis/bestia-dragon-mitica-estilo-anime_23-2151112840.jpg?w=996&t=st=1723590986~exp=1723591586~hmac=5169b8c20afdda9e60775763bdbfd26b07017503d0350b45b3e3327fcb5c4f63" alt="">
+            </div>
+          </div>
+          <div class="slider-btns">
+            <a class="prev" href="#">&laquo;</a>
+            <a class="next" href="#">&raquo;</a>
+          </div>
+        </div>
+      </section>
+      <section id="seccion8" class="section" data-scroll-spy>
+        <h2>Video Inteligente</h2>
+        <video src="https://cdn.pixabay.com/video/2023/10/22/186115-877653483_large.mp4" muted controls loop data-smart-video></video>
+        <!--<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br>
+        <video src="assets/Deadpool & Wolverine - Tráiler Oficial - Doblado.mp4" muted controls loop data-smart-video></video> -->
+        
+      </section>
+      <section id="seccion10" class="section" data-scroll-spy>
+        <h2>Narrador</h2>
+        <select id="speech-select">
+          <option value="">--- Elige una Voz ---</option>
+        </select>
+        <br><br>
+        <textarea id="speech-text" cols="50" rows="5" placeholder="Ingresa texto para leerlo..."></textarea>
+        <br><br>
+        <button id="speech-btn">Leer texto</button>
+      </section>
+      <section id="seccion11" class="section" data-scroll-spy>
+        <h2>Sección 11</h2>
+        <a href="./menu-magic.html">Presiona aquí hermosa Valeria 😘</a>
+      </section>
+      <section id="seccion9" class="section" data-scroll-spy>
+        <h2>Validaciones de Formulario</h2>
+        <form class="contact-form" target="_blank" action="https://formsubmit.co/nelvissalazar.31@gmail.com" method="POST">
+          <legend>Envíame tus comentarios</legend>
+          <input type="text" name="name" placeholder="Escribe tu nombre" title="Nombre sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+          <input type="email" name="email" placeholder="Escribe tu email" title="Email incorrecto" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,5}" required>
+          <input type="text" name="subject" placeholder="Asunto a tratar" title="El Asunto es requerido" required>
+          <textarea name="comments" cols="50" rows="5" placeholder="Escribe tus comentarios" title="Tu comentario no debe exceder los 255 caracteres" data-pattern="^.{1,255}$" required></textarea>
+          <input type="submit" value="Enviar">
+          <div class="contact-form-loader none">
+            <img src="assets/rings.svg" alt="Cargando">
+          </div>
+          <div class="contact-form-response none">
+          <p>Los datos han sido enviados</p>
+          </div>
+          
+        </form>
       </section>
     </main>
     <button class="scroll-top-btn hidden">&#11014;</button>
