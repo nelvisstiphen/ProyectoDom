@@ -27,6 +27,11 @@ body {
   overflow-x: hidden;
 }
 
+a {
+  text-decoration: none;
+  color: #f500fd;
+}
+
 li {
   list-style: none;
 }

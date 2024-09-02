@@ -8,6 +8,14 @@ html {
   text-align: center;
 }
 
+body {
+  background-color: black;
+  color: greenyellow;
+}
+
+.links {
+  font-size: 30px;
+}
 .loader {
   display: block;
   margin: auto;
