@@ -491,6 +491,7 @@ video {
   font-family: sans-serif;
   background-color: #46464648;
   border-radius: 7px;
+  color: #3bfd00;
 }
 
 .contact-form input[type="submit"] {
