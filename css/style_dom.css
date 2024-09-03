@@ -489,16 +489,20 @@ video {
 .contact-form textarea {
   font-size: 1rem;
   font-family: sans-serif;
+  background-color: #46464648;
+  border-radius: 7px;
 }
 
 .contact-form input[type="submit"] {
   width: 50%;
   font-weight: bold;
   cursor: pointer;
+  color: #00dffd;
+  background-color: #f500fd;
 }
 
 .contact-form *::placeholder {
-  color: #000;
+  color: #00ffff;
 }
 
 .contact-form [required]:valid {
@@ -506,7 +510,7 @@ video {
 }
 
 .contact-form [required]:invalid {
-  border: 2px solid var(--form-error-color);
+  border: 1px solid var(--form-error-color);
 }
 
 .contact-form-error {
@@ -535,4 +539,61 @@ video {
     visibility: visible;
     opacity: 1;
   }
+}
+
+/*  FORM GLASS  */
+
+.container-form {
+  width: 80%;
+  height: auto;
+  margin: auto;
+}
+
+.glass {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.fondo {
+  position: relative;
+}
+
+.cuadro {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  backdrop-filter: blur(20px);
+}
+
+.cuadro1 {
+  width: 0;
+  height: 0;
+  border-left: 70px solid transparent;
+  border-right: 70px solid transparent;
+  border-bottom: 140px solid aqua;
+  top: 30%;
+  left: 60%;
+}
+.cuadro2 {
+  width: 150px;
+  height: 150px;
+  background-color: #f500fd;
+  border-radius: 50%;
+  top: 20%;
+  left: 30%;
+}
+.cuadro3 {
+  width: 100px;
+  height: 100px;
+  background-color: #3bfd00;
+  top: 55%;
+  left: 20%;
 }
