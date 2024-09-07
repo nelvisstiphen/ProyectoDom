@@ -572,16 +572,16 @@ video {
   width: 100px;
   height: 100px;
   backdrop-filter: blur(20px);
+  transition: transform 1s linear;
 }
 
 .cuadro1 {
-  width: 0;
-  height: 0;
   border-left: 70px solid transparent;
   border-right: 70px solid transparent;
   border-bottom: 140px solid aqua;
   top: 30%;
-  left: 60%;
+  left: 50%;
+  animation: forma1 10s ease infinite both, forma3 50s ease infinite both;
 }
 .cuadro2 {
   width: 150px;
@@ -589,12 +589,50 @@ video {
   background-color: #f500fd;
   border-radius: 50%;
   top: 20%;
-  left: 30%;
+  left: 20%;
+  animation: forma2 8s ease infinite both;
 }
 .cuadro3 {
   width: 100px;
   height: 100px;
   background-color: #3bfd00;
-  top: 55%;
+  top: 45%;
   left: 20%;
+  animation: forma3 30s ease infinite both;
+}
+
+@keyframes forma1 {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes forma2 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes forma3 {
+  0% {
+    transform: rotateZ(0);
+  }
+  50% {
+    transform: rotateZ(180deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
 }
