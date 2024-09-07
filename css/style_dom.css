@@ -510,8 +510,13 @@ video {
   border-radius: 7px;
 }
 
+.contact-form textarea {
+  width: 100%;
+}
+
 .textarea {
   resize: none;
+  width: 80%;
 }
 
 /*  propiedades generales para inputs y textareas   */
