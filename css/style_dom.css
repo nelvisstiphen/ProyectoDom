@@ -727,3 +727,14 @@ video {
   font-size: 70px;
   animation: pulse 1s linear infinite;
 }
+
+.audio-fondo {
+  position: fixed;
+  z-index: 100;
+}
+
+.audio-fondo audio {
+  position: absolute;
+  opacity: 0.3;
+  width: 300px;
+}
