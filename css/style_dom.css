@@ -512,6 +512,7 @@ video {
 
 .textarea {
   resize: none;
+  width: 100%;
 }
 
 /*  propiedades generales para inputs y textareas   */
@@ -554,6 +555,7 @@ video {
   color: var(--color-rosa);
   padding: 7px;
   background-color: black;
+  width: 100%;
 }
 
 .contact-form input[type="submit"] {
@@ -726,16 +728,4 @@ video {
 .pulse {
   font-size: 70px;
   animation: pulse 1s linear infinite;
-}
-
-.audio-fondo {
-  position: fixed;
-  z-index: 100;
-}
-
-.audio-fondo audio {
-  position: absolute;
-  opacity: 0.3;
-  width: 300px;
-  margin-top: 10px;
 }
