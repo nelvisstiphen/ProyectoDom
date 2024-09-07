@@ -512,7 +512,6 @@ video {
 
 .textarea {
   resize: none;
-  width: 80%;
 }
 
 /*  propiedades generales para inputs y textareas   */
@@ -706,7 +705,7 @@ video {
   }
 }
 
-.container-formas {
+.contenedor-formas {
   position: fixed;
   opacity: 0.3;
   width: 100%;
