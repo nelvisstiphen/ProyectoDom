@@ -25,7 +25,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
   );
   scrollTopBotton(".scroll-top-btn");
   responsiveTester("responsive-tester");
-  /* webCam("webcam"); */
+  webCam("webcam");
   searchFilters(".card-filter", ".card");
   draw("#winner-btn", ".player");
   slider();
