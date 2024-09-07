@@ -20,6 +20,15 @@
   <script src="https://kit.fontawesome.com/4b4c06747c.js" crossorigin="anonymous"></script>
 </head>
 <body data-dark>
+  
+  <div class="container-formas">
+    
+      <span class="cuadro1 cuadro"></span>
+        <span class="cuadro2 cuadro"></span>
+        <span class="cuadro3 cuadro"></span>
+    
+  </div>
+  
   <header class="header">
     <h1>Manejo del DOM</h1>
   </header>
@@ -97,7 +106,9 @@
           <span style="--i:28;">⭐</span>
         </div>
       </div> -->
+      
       <section id="seccion1" class="section" data-scroll-spy>
+        
         <h2>Reloj Digital y Alarma Sonora</h2>
         <div id="reloj"></div>
         <div>
@@ -127,16 +138,24 @@
       </section>
       <section id="seccion3" class="section" data-scroll-spy>
         <h2>Reponsive Tester</h2>
-        <form id="responsive-tester">
-          <input name="direccion" type="url" placeholder="URL" required>
-          <br>
-          <input name="ancho" type="text" placeholder="Ancho" required>
-          <br>
-          <input name="alto" type="text" placeholder="Alto" required>
-          <br>
-          <input name="probar" type="submit" value="Probar">
-          <input name="cerrar" type="button" value="Cerrar">
+        <div class="glass container-form">
+        <form id="responsive-tester" class="form responsive-tester">
+          <div class="tester-input">
+            <input class="input-gn input-tester" name="direccion" type="url" placeholder="Pega una URL de una página aquí" required>
+          
+          <input class="input-gn input-tester" name="ancho" type="text" placeholder="Ancho (Ej: 800)" required>
+          
+          <input class="input-gn input-tester" name="alto" type="text" placeholder="Alto (Ej: 800)" required>
+          </div>
+          <div class="tester-btn">
+            <input class="input-btn" name="probar" type="submit" value="Probar">
+          <input class="input-btn" name="cerrar" type="button" value="Cerrar">
+          </div>
+          
+          
+          
         </form>
+      </div>
       </section>
       <section id="seccion4" class="section" data-scroll-spy>
         <h2>Deteccion de la camara web <i>(Inactivo)</i></h2>
@@ -144,7 +163,7 @@
       </section>
       <section id="seccion5" class="section" data-scroll-spy>
         <h2>Filtro de busqueda</h2>
-        <input type="search" placeholder="Buscar..." class="card-filter">
+        <input type="search" placeholder="Buscar..." class="card-filter input-gn">
         <article class="cards" >
           <div class="card">
             <p>😀</p>
@@ -248,41 +267,40 @@
         <!-- <video src="https://cdn.pixabay.com/video/2023/10/22/186115-877653483_large.mp4" muted controls loop data-smart-video></video> -->
         <!--<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <br><br><br><br><br><br><br>
-        <video src="assets/Deadpool & Wolverine - Tráiler Oficial - Doblado.mp4" muted controls loop data-smart-video></video> -->
-        
+        <video src="assets/Deadpool & Wolverine - Tráiler Oficial - Doblado.mp4" muted controls loop data-smart-video></video> 
+        -->
       </section>
       <section id="seccion9" class="section" data-scroll-spy>
         <h2>Narrador</h2>
-        <select id="speech-select">
+        <select class="input-gn select" id="speech-select">
           <option value="">--- Elige una Voz ---</option>
         </select>
         <br><br>
-        <textarea id="speech-text" cols="50" rows="5" placeholder="Ingresa texto para leerlo..."></textarea>
+        <textarea class="textarea input-gn" id="speech-text" cols="50" rows="5" placeholder="Ingresa texto para leerlo..."></textarea>
         <br><br>
         <button id="speech-btn">Leer texto</button>
       </section>
       <section id="seccion10" class="section" data-scroll-spy>
         <h2>Sección 10</h2>
+        <!-- -->
         <a href="./menu-magic.html">Presiona aquí hermosa Valeria 😘</a>
         <br>
         <br>
         <br>
-        <a href="./api-pokemon.html">Y presiona aquí también 🥰</a>
+        <a href="./api-pokemon.html">Y presiona aquí también 🥰</a> 
         
       </section>
       <section id="seccion11" class="section fondo" data-scroll-spy>
-        <span class="cuadro1 cuadro"></span>
-        <span class="cuadro2 cuadro"></span>
-        <span class="cuadro3 cuadro"></span>
+        
         <h2>Validaciones de Formulario</h2>
         <div class="container-form glass">
-        <form class="contact-form" target="_blank" action="https://formsubmit.co/nelvissalazar.31@gmail.com" method="POST">
+        <form class="contact-form form" target="_blank" action="https://formsubmit.co/nelvissalazar.31@gmail.com" method="POST">
           <legend>Envíame tus comentarios</legend>
-          <input type="text" name="name" placeholder="Escribe tu nombre" title="Nombre sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
-          <input type="email" name="email" placeholder="Escribe tu email" title="Email incorrecto" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,5}" required>
-          <input type="text" name="subject" placeholder="Asunto a tratar" title="El Asunto es requerido" required>
-          <textarea name="comments" cols="50" rows="5" placeholder="Escribe tus comentarios" title="Tu comentario no debe exceder los 255 caracteres" data-pattern="^.{1,255}$" required></textarea>
-          <input type="submit" value="Enviar">
+          <input class="input-gn" type="text" name="name" placeholder="Escribe tu nombre" title="Nombre sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" autocomplete="off" required>
+          <input class="input-gn" type="email" name="email" placeholder="Escribe tu email" title="Email incorrecto" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,5}" autocomplete="off" required>
+          <input class="input-gn" type="text" name="subject" placeholder="Asunto a tratar" title="El Asunto es requerido" autocomplete="off" required>
+          <textarea class="textarea input-gn" name="comments" cols="50" rows="5" placeholder="Escribe tus comentarios" title="Tu comentario no debe exceder los 255 caracteres" data-pattern="^.{1,255}$" required></textarea>
+          <input type="submit" value="Enviar" class="input-gn">
           <div class="contact-form-loader none">
             <img src="assets/rings.svg" alt="Cargando">
           </div>
@@ -296,7 +314,7 @@
     </main>
     <button class="scroll-top-btn hidden">&#11014;</button>
     <button class="dark-theme-btn">🌙</button>
-    
+  
     <script src="./js/index_dom.js" type="module"></script>
 </body>
 </html>

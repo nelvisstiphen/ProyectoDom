@@ -2,10 +2,12 @@
   --main-font: sans-serif;
   --font-size: 16px;
   --main-color: #00dffd;
-  --second-color: #222222;
+  --second-color: #000000;
   --main-modal-color: #00dffd;
   --second-modal-color: rgba(34, 34, 34, 0.85);
   --container-width: 1200px;
+  --color-rosa: #f500fd;
+  --color-blanco: #fff;
 }
 
 html {
@@ -29,7 +31,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #f500fd;
+  color: var(--color-rosa);
 }
 
 li {
@@ -97,6 +99,7 @@ img {
   max-width: var(--container-width);
   min-height: 100vh;
   text-align: center;
+  position: relative;
 }
 
 .panel {
@@ -298,7 +301,7 @@ i {
   width: 50vw;
   border-radius: 7px;
   background-color: rgb(0, 0, 0);
-  border: none;
+  border: var(--main-color);
   color: var(--main-color);
 }
 
@@ -384,7 +387,7 @@ i {
   border-radius: 50%;
   border: thin solid #000;
   text-decoration: none;
-  background-color: #fff;
+  background-color: var(--color-blanco);
   color: #000;
   transition: all 0.3 ease;
 }
@@ -457,11 +460,43 @@ video {
   width: 100%;
 }
 
+.responsive-tester {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.tester-input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.tester-input input {
+  padding: 0.5rem;
+  border: none;
+  margin: 0.5rem;
+}
+
+.tester-btn {
+  display: flex;
+}
+
+.tester-btn input {
+  padding: 0.5rem 1.5rem;
+  margin: 0.5rem;
+}
+
 /******** ContactForm Validations ********/
 
 .contact-form {
   --form-ok-color: rgb(0, 255, 0);
   --form-error-color: rgb(255, 32, 32);
+}
+
+.form {
   margin-left: auto;
   margin-right: auto;
   width: 80%;
@@ -472,10 +507,39 @@ video {
   margin: 1rem auto;
   display: block;
   width: 100%;
+  border-radius: 7px;
 }
 
-.contact-form textarea {
+.textarea {
   resize: none;
+}
+
+/*  propiedades generales para inputs y textareas   */
+
+.input-gn {
+  border-radius: 7px;
+  background-color: #46464648;
+  font-family: sans-serif;
+  background-image: linear-gradient(
+    90deg,
+    rgba(224, 4, 253, 0.1),
+    rgba(0, 225, 255, 0.1)
+  );
+  font-size: 0.9rem;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: var(--color-rosa);
+}
+
+.input-btn {
+  width: 50%;
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--main-color);
+  background-color: var(--color-rosa);
+  border: none;
+  border-radius: 7px;
+  font-weight: bold;
 }
 
 .contact-form legend,
@@ -485,25 +549,24 @@ video {
   text-align: center;
 }
 
-.contact-form input,
-.contact-form textarea {
-  font-size: 1rem;
-  font-family: sans-serif;
-  background-color: #46464648;
-  border-radius: 7px;
-  color: #3bfd00;
+.select {
+  text-align: center;
+  color: var(--color-rosa);
+  padding: 7px;
+  background-color: black;
 }
 
 .contact-form input[type="submit"] {
   width: 50%;
   font-weight: bold;
   cursor: pointer;
-  color: #00dffd;
-  background-color: #f500fd;
+  color: var(--main-color);
+  background-color: var(--color-rosa);
+  border: none;
 }
 
 .contact-form *::placeholder {
-  color: #00ffff;
+  color: gray;
 }
 
 .contact-form [required]:valid {
@@ -518,7 +581,7 @@ video {
   margin-top: -1rem;
   font-size: 80%;
   background-color: var(--form-error-color);
-  color: #fff;
+  color: var(--color-blanco);
   transition: all 0.8s ease;
 }
 
@@ -573,43 +636,45 @@ video {
   height: 100px;
   backdrop-filter: blur(20px);
   transition: transform 1s linear;
+  z-index: -5;
 }
 
 .cuadro1 {
   border-left: 70px solid transparent;
   border-right: 70px solid transparent;
-  border-bottom: 140px solid aqua;
+  border-bottom: 140px solid #3bfd00;
   top: 30%;
   left: 50%;
-  animation: forma1 10s ease infinite both, forma3 50s ease infinite both;
+  animation: forma1 50s linear infinite both;
 }
 .cuadro2 {
   width: 150px;
   height: 150px;
-  background-color: #f500fd;
+  background-color: #ff7300;
   border-radius: 50%;
-  top: 20%;
-  left: 20%;
-  animation: forma2 8s ease infinite both;
+  top: 10%;
+  left: 10%;
+  animation: forma2 8s linear infinite both;
 }
 .cuadro3 {
   width: 100px;
   height: 100px;
   background-color: #3bfd00;
-  top: 45%;
+  top: 70%;
   left: 20%;
-  animation: forma3 30s ease infinite both;
+  animation: forma3 40s linear infinite both;
 }
 
 @keyframes forma1 {
   0% {
-    transform: translateX(0);
+    transform: rotateZ(0);
   }
   50% {
-    transform: translateX(20px);
+    transform: rotateZ(180deg);
+    border-bottom: 140px solid #f500fd;
   }
   100% {
-    transform: translateX(0);
+    transform: rotateZ(360deg);
   }
 }
 
@@ -619,6 +684,7 @@ video {
   }
   50% {
     transform: translateY(20px);
+    background-color: #0011fd;
   }
   100% {
     transform: translateY(0);
@@ -630,9 +696,17 @@ video {
     transform: rotateZ(0);
   }
   50% {
-    transform: rotateZ(180deg);
+    transform: rotateZ(-180deg);
+    background-color: red;
   }
   100% {
-    transform: rotateZ(360deg);
+    transform: rotateZ(-360deg);
   }
+}
+
+.container-formas {
+  position: fixed;
+  opacity: 0.3;
+  width: 100%;
+  height: 100vh;
 }
