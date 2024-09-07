@@ -737,4 +737,5 @@ video {
   position: absolute;
   opacity: 0.3;
   width: 300px;
+  margin-top: 10px;
 }
