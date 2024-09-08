@@ -1,5 +1,6 @@
 import scrollTopBotton from "./boton_scroll.js";
 import slider from "./carrusel.js";
+import cambiosColor from "./color-rgb.js";
 import webCam from "./deteccion_webcam.js";
 import searchFilters from "./filtro_busqueda.js";
 import hamburgerMenu from "./menu_hamburguesa.js";
@@ -32,6 +33,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
   scrollSpy();
   smartVideo();
   contactFormValidations();
+  cambiosColor();
 });
 
 d.addEventListener("keydown", (e) => {

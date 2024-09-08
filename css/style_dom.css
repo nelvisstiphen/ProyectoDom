@@ -663,8 +663,8 @@ video {
   animation: forma2 8s linear infinite both;
 }
 .cuadro3 {
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
   background-color: #3bfd00;
   top: 70%;
   left: 20%;
@@ -732,4 +732,17 @@ video {
 .pulse {
   font-size: 70px;
   animation: pulse 1s linear infinite;
+}
+
+.contenedor-principal {
+  width: 50vw;
+  max-width: 600px;
+  min-height: 350px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  flex-direction: column;
+  margin: auto;
 }
