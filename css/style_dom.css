@@ -540,8 +540,8 @@ video {
   width: 50%;
   font-weight: bold;
   cursor: pointer;
-  color: var(--main-color);
-  background-color: var(--color-rosa);
+  color: var(--second-color);
+  background-color: var(--main-color);
   border: none;
   border-radius: 7px;
   font-weight: bold;
@@ -566,8 +566,6 @@ video {
   width: 50%;
   font-weight: bold;
   cursor: pointer;
-  color: var(--main-color);
-  background-color: var(--color-rosa);
   border: none;
 }
 
