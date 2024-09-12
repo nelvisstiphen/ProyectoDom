@@ -52,9 +52,10 @@ h2 {
 
 iframe {
   margin: 1rem 0;
-  width: 90%;
+  width: 100%;
   max-width: 700px;
   min-width: 300px;
+  border-radius: 20px;
 }
 
 ::-webkit-scrollbar {
