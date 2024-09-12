@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Manejo del DOM</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css" integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
   <link rel="stylesheet" href="./css/style_dom.css">
 
   <link rel="shortcut icon" type="image/png" href="./assets/favicon.png">
@@ -17,7 +17,7 @@
   <meta property="og:url" name="twitter:url" content="https://app-dom-test.netlify.app/">
   <meta property="og:description" name="twitter:description" content="App Manejo del DOM">
   <meta property="og:type" content="website"> 
-  <script src="https://kit.fontawesome.com/4b4c06747c.js" crossorigin="anonymous"></script>
+  
 </head>
 <body data-dark>
   
@@ -32,16 +32,18 @@
   </div> -->
   
   <header class="header">
-    <h1>Manejo del DOM</h1>
+    <h1>Manejo del Dom</h1>
   </header>
-    <button class="panel-btn hamburger hamburger--vortex" type="button" aria-label="menu">
+    <!-- <button class="panel-btn hamburger hamburger--vortex" type="button" aria-label="menu">
       <span class="hamburger-box">
         <span class="hamburger-inner"></span>
       </span>
-    </button>
+    </button> -->
+
+    <button class="panel-btn">MENU</button>
     <aside class="panel">
       <nav class="menu">
-        <a href="#seccion1" data-scroll-spy>Reloj Digital y Alarma Sonora</a>
+        <a href="#seccion1" data-scroll-spy>Reloj y Alarma</a>
         <a href="#seccion2" data-scroll-spy>Eventos del Teclado y Click</a>
         <a href="#seccion3" data-scroll-spy>Responsive Tester</a>
         <a href="#seccion4" data-scroll-spy>Deteccion Camara Web</a>
@@ -112,14 +114,15 @@
     </div>
       <section id="seccion1" class="section" data-scroll-spy>
         
-        <h2>Reloj Digital y Alarma Sonora</h2>
+        <h2>Reloj y Alarma</h2>
         <div id="reloj"></div>
-        <div>
+        <div class="container-clock">
           <button id="activar-reloj">Iniciar Reloj</button>
           <button id="desactivar-reloj">Detener Reloj</button>
           <button id="activar-alarma">Iniciar Alarma</button>
           <button id="desactivar-alarma">Detener Alarma</button>
         </div>
+        
       </section>
       <section id="seccion2" class="section" data-scroll-spy>
         <h2>Eventos del Teclado y Click</h2>
@@ -144,11 +147,11 @@
         <div class="glass container-form">
         <form id="responsive-tester" class="form responsive-tester">
           <div class="tester-input">
-            <input class="input-gn input-tester" name="direccion" type="url" placeholder="Pega una URL de una página aquí" required>
+            <input class="input input-tester" name="direccion" type="url" placeholder="Pega una URL de una página aquí" required>
           
-          <input class="input-gn input-tester" name="ancho" type="text" placeholder="Ancho (Ej: 800)" required>
+          <input class="input input-tester" name="ancho" type="text" placeholder="Ancho (Ej: 800)" required>
           
-          <input class="input-gn input-tester" name="alto" type="text" placeholder="Alto (Ej: 800)" required>
+          <input class="input input-tester" name="alto" type="text" placeholder="Alto (Ej: 800)" required>
           </div>
           <div class="tester-btn">
             <input class="input-btn" name="probar" type="submit" value="Probar">
@@ -166,7 +169,7 @@
       </section>
       <section id="seccion5" class="section" data-scroll-spy>
         <h2>Filtro de busqueda</h2>
-        <input type="search" placeholder="Buscar..." class="card-filter input-gn">
+        <input type="search" placeholder="Buscar..." class="card-filter input">
         <article class="cards" >
           <div class="card">
             <p>😀</p>
@@ -248,13 +251,13 @@
         <div class="slider">
           <div class="slider-slides">
             <div class="slider-slide active">
-              <img src="./assets/marvel-1.jpeg" alt="vengadores 1">
+              <img src="./assets/marvel-1.webp" alt="vengadores 1">
             </div>
             <div class="slider-slide">
               <img src="./assets/marvel-2.webp" alt="vengadores 2">
             </div>
             <div class="slider-slide">
-              <img src="./assets/marvel-3.jpg" alt="vengadores 3">
+              <img src="./assets/marvel-3.webp" alt="vengadores 3">
             </div>
             <div class="slider-slide">
               <img src="./assets/marvel-4.webp" alt="vengadores 4">
@@ -276,11 +279,11 @@
       </section>
       <section id="seccion9" class="section" data-scroll-spy>
         <h2>Narrador</h2>
-        <select class="input-gn select" id="speech-select" aria-label="narrator">
+        <select class="input select" id="speech-select" aria-label="narrator">
           <option value="">--- Elige una Voz ---</option>
         </select>
         <br><br>
-        <textarea class="textarea input-gn" id="speech-text" cols="50" rows="5" placeholder="Ingresa texto para leerlo..."></textarea>
+        <textarea class="textarea input" id="speech-text" cols="50" rows="5" placeholder="Ingresa texto para leerlo..."></textarea>
         <br><br>
         <button id="speech-btn">Leer texto</button>
       </section>
@@ -322,10 +325,10 @@
         <div class="container-form glass">
         <form class="contact-form form" target="_blank" action="https://formsubmit.co/nelvissalazar.16@gmail.com" method="POST">
           <legend>Envíame tus comentarios</legend>
-          <input class="input-gn" type="text" name="name" placeholder="Escribe tu nombre" title="Nombre sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" autocomplete="off" required>
-          <input class="input-gn" type="email" name="email" placeholder="Escribe tu email" title="Email incorrecto" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,5}" autocomplete="off" required>
-          <input class="input-gn" type="text" name="subject" placeholder="Asunto a tratar" title="El Asunto es requerido" autocomplete="off" required>
-          <textarea class="textarea input-gn" name="comments" cols="50" rows="5" placeholder="Escribe tus comentarios" title="Tu comentario no debe exceder los 255 caracteres" data-pattern="^.{1,255}$" required></textarea>
+          <input class="input" type="text" name="name" placeholder="Escribe tu nombre" title="Nombre sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" autocomplete="off" required>
+          <input class="input" type="email" name="email" placeholder="Escribe tu email" title="Email incorrecto" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,5}" autocomplete="off" required>
+          <input class="input" type="text" name="subject" placeholder="Asunto a tratar" title="El Asunto es requerido" autocomplete="off" required>
+          <textarea class="textarea input" name="comments" cols="50" rows="5" placeholder="Escribe tus comentarios" title="Tu comentario no debe exceder los 255 caracteres" data-pattern="^.{1,255}$" required></textarea>
           <input type="submit" value="Enviar" class="input-btn">
           <div class="contact-form-loader none">
             <img src="assets/rings.svg" alt="Cargando">

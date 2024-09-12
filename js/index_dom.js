@@ -20,11 +20,7 @@ const d = document;
 d.addEventListener("DOMContentLoaded", (e) => {
   hamburgerMenu(".panel-btn", ".panel", ".menu a");
   digitalClock("#reloj", "#activar-reloj", "#desactivar-reloj");
-  alarm(
-    "assets/ringtones-the-avengers.mp3",
-    "#activar-alarma",
-    "#desactivar-alarma"
-  );
+  alarm("assets/alarma.mp3", "#activar-alarma", "#desactivar-alarma");
   scrollTopBotton(".scroll-top-btn");
   responsiveTester("responsive-tester");
   webCam("webcam");

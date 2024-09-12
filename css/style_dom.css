@@ -13,7 +13,6 @@
 html {
   box-sizing: border-box;
   font-family: var(--main-font);
-  font-size: var(--font-size);
   scroll-behavior: smooth;
 }
 
@@ -155,7 +154,7 @@ img {
   padding: 0.75rem;
   width: inherit;
   display: block;
-  font-size: 1rem;
+
   text-decoration: none;
   color: var(--main-color);
   font-weight: bold;
@@ -528,7 +527,7 @@ video {
 
 /*  propiedades generales para inputs y textareas   */
 
-.input-gn {
+.input {
   border-radius: 7px;
   background-color: #46464648;
   font-family: sans-serif;
