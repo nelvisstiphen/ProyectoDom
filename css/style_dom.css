@@ -712,12 +712,12 @@ video {
   padding: 3rem;
   display: flex;
   flex-direction: column;
+  font-weight: bold;
 }
 
 .footer small {
   padding: 0.5rem;
   z-index: 100;
-  color: var(--main-color);
 }
 
 /*  EYES MOVE  */
