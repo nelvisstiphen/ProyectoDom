@@ -26,6 +26,7 @@ html {
 
 body {
   overflow-x: hidden;
+  font-size: 14px;
 }
 
 a {
@@ -41,7 +42,12 @@ li {
   list-style: none;
 }
 
+h1 {
+  font-size: 20px;
+}
+
 h2 {
+  font-size: 16px;
   margin: 2rem 0;
 }
 
@@ -436,17 +442,17 @@ img {
 .slider-btns {
   position: absolute;
   width: 100%;
-  top: 50%;
+  top: 47%;
   display: flex;
   justify-content: space-between;
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 2.2rem;
 }
 
 .slider a {
   display: block;
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   border: thin solid #000;
   text-decoration: none;
@@ -542,7 +548,7 @@ video {
 
 .contact-form legend,
 .contact-form-response {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
   text-align: center;
 }
