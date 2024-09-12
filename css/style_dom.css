@@ -24,14 +24,18 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
   color: var(--color-rosa);
+}
+
+ul {
+  padding: 0;
 }
 
 li {
@@ -111,7 +115,7 @@ img {
   right: 0;
   width: 100%;
   background-color: var(--second-modal-color);
-  transform: translate(0, -100%);
+  transform: translate(0, -130%);
   opacity: 0;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -148,13 +152,12 @@ img {
 }
 
 .menu a {
-  padding: 1rem;
+  padding: 0.75rem;
   width: inherit;
   display: block;
   font-size: 1rem;
   text-decoration: none;
   color: var(--main-color);
-  transition: all 0.3s ease;
   font-weight: bold;
 }
 
@@ -331,6 +334,10 @@ i {
   visibility: hidden;
   opacity: 0;
   order: 1;
+}
+
+.get-ganador {
+  color: #3bfd00;
 }
 
 /********** Responsive Slider ***********/

@@ -1,4 +1,5 @@
 const d = document;
+const $getGanador = d.querySelector(".get-ganador");
 
 export default function draw(btn, selector) {
   const getWinner = (selector) => {
@@ -13,7 +14,8 @@ export default function draw(btn, selector) {
   d.addEventListener("click", (e) => {
     if (e.target.matches(btn)) {
       let result = getWinner(selector);
-      alert(result);
+      //alert(result);
+      $getGanador.textContent = result;
       console.log(result);
     }
   });
