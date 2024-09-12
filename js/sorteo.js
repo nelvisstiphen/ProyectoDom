@@ -1,5 +1,5 @@
 const d = document;
-const $getGanador = d.querySelector(".get-ganador");
+const $getGanador = d.querySelector(".get-winner");
 
 export default function draw(btn, selector) {
   const getWinner = (selector) => {
@@ -16,7 +16,7 @@ export default function draw(btn, selector) {
       let result = getWinner(selector);
       //alert(result);
       $getGanador.textContent = result;
-      console.log(result);
+      //console.log(result);
     }
   });
 }

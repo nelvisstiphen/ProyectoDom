@@ -68,21 +68,6 @@ h2 {
   /* border: 0.12em solid hsl(192, 100%, 50%); */
 }
 
-/* ::-webkit-scrollbar-thumb:hover {
-  
-} 
-
-button {
-  background-color: var(--main-color);
-  padding: 7px;
-  border-radius: 10px;
-  background-color: var(--main-color);
-  font-family: sans-serif;
-  font-weight: bold;
-  border: 2px solid var(--second-color);
-  box-shadow: 4px 4px 10px var(--second-color);
-}*/
-
 img {
   max-width: 100%;
   height: auto;
@@ -248,7 +233,7 @@ img {
   color: var(--color-rosa);
 }
 
-/*  Eventos del Teclado  */
+/************  Eventos del Teclado  ************/
 
 .stage {
   display: flex;
@@ -269,7 +254,7 @@ img {
   padding: 40px;
 }
 
-/*  ScrollTopBotton   */
+/************  ScrollTopBotton  ************/
 
 .scroll-top-btn {
   position: fixed;
@@ -298,7 +283,7 @@ img {
   opacity: 0;
 }
 
-/*  DarkThemeBotton   */
+/************  DarkThemeBotton  ************/
 
 .dark-theme-btn {
   position: fixed;
@@ -316,11 +301,6 @@ img {
   border: 0;
   transition: all 0.3s ease-out;
 }
-
-/* .dark-theme-btn:hover {
-  background-color: var(--second-color);
-  color: var(--main-color);
-} */
 
 .dark-mode {
   background-color: var(--second-color);
@@ -361,7 +341,7 @@ img {
 }
  */
 
-/***  Search Filters  ***/
+/************  Search Filters  ************/
 
 .cards {
   display: grid;
@@ -397,8 +377,10 @@ img {
   order: 1;
 }
 
-.get-ganador {
+.get-winner {
   color: #3bfd00;
+  height: 7px;
+  margin: 7px;
 }
 
 /********** Responsive Slider ***********/
@@ -539,12 +521,6 @@ video {
   resize: none;
 }
 
-/*  propiedades generales para inputs y textareas   */
-
-.input::placeholder {
-  color: white;
-}
-
 .contact-form legend,
 .contact-form-response {
   font-size: 1rem;
@@ -556,13 +532,6 @@ video {
   text-align: center;
   color: var(--color-rosa);
 }
-
-/* .contact-form input[type="submit"] {
-  width: 50%;
-  font-weight: bold;
-  cursor: pointer;
-  border: none;
-} */
 
 .contact-form [required]:valid {
   border: 2px solid var(--form-ok-color);
@@ -718,6 +687,10 @@ video {
 .footer small {
   padding: 0.5rem;
   z-index: 100;
+}
+
+.footer a {
+  color: rgb(255, 0, 128);
 }
 
 /*  EYES MOVE  */
