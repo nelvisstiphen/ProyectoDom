@@ -57,7 +57,7 @@
         <a href="#seccion7" data-scroll-spy>Responsive Slider</a>
         <a href="#seccion8" data-scroll-spy>Video Inteligente</a>
         <a href="#seccion9" data-scroll-spy>Narrador</a>
-        <a href="#seccion10" data-scroll-spy>Sección 10</a>
+        <a href="#seccion10" data-scroll-spy>Cambio Fondo RGB</a>
         <a href="#seccion11" data-scroll-spy>Validaciones de Formulario</a>
         <a href="./api-pokemon.html" data-scroll-spy>Ver API Pokemon</a>
         <a href="/crud_ajax.html" data-scroll-spy>CRUD AJAX</a>
@@ -120,13 +120,23 @@
       <section id="seccion1" class="section" data-scroll-spy>
         
         <h2>Reloj y Alarma</h2>
-        <div id="reloj"></div>
-        <div class="container-clock">
-          <button id="activar-reloj">Iniciar Reloj</button>
-          <button id="desactivar-reloj">Detener Reloj</button>
-          <button id="activar-alarma">Iniciar Alarma</button>
-          <button id="desactivar-alarma">Detener Alarma</button>
+        
+        <div class="clock container-glass glass">
+          <div id="reloj"></div>
+          <div>
+            <button class="btn" id="activar-reloj">Iniciar Reloj</button>
+          <button class="btn" id="desactivar-reloj">Detener Reloj</button>
+          </div>
+          
+          <div>
+            <button class="btn" id="activar-alarma">Iniciar Alarma</button>
+          <button class="btn" id="desactivar-alarma">Detener Alarma</button>
+          </div>
+          
         </div>
+        
+          
+        
         
       </section>
       <section id="seccion2" class="section" data-scroll-spy>
@@ -136,12 +146,12 @@
         </article>
         <div class="container-btn-ball">
           <div>
-            <button id="btn-up" class="btn-ball">SUBIR</button>
+            <button id="btn-up" class="btn btn-ball">SUBIR</button>
           </div>
           <div>
-            <button id="btn-left" class="btn-ball">IZQUIERDA</button>
-          <button id="btn-down" class="btn-ball">ABAJO</button>
-          <button id="btn-right" class="btn-ball">DERECHA</button>
+            <button id="btn-left" class="btn btn-ball">IZQUIERDA</button>
+          <button id="btn-down" class="btn btn-ball">ABAJO</button>
+          <button id="btn-right" class="btn btn-ball">DERECHA</button>
           </div>
           
         </div>
@@ -149,24 +159,19 @@
       </section>
       <section id="seccion3" class="section" data-scroll-spy>
         <h2>Reponsive Tester</h2>
-        <div class="glass container-form">
-        <form id="responsive-tester" class="form responsive-tester">
-          <div class="tester-input">
-            <input class="input input-tester" name="direccion" type="url" placeholder="Pega una URL de una página aquí" required>
+        
+        <form id="responsive-tester" class="glass container-glass">
+          <input class="input" name="direccion" type="url" placeholder="Pega una URL de una página aquí" required>
+          <input class="input" name="ancho" type="text" placeholder="Ancho (Ej: 800)" required>
+          <input class="input" name="alto" type="text" placeholder="Alto (Ej: 800)" required>
           
-          <input class="input input-tester" name="ancho" type="text" placeholder="Ancho (Ej: 800)" required>
-          
-          <input class="input input-tester" name="alto" type="text" placeholder="Alto (Ej: 800)" required>
-          </div>
-          <div class="tester-btn">
+          <div>
             <input class="input-btn" name="probar" type="submit" value="Probar">
-          <input class="input-btn" name="cerrar" type="button" value="Cerrar">
+            <input class="input-btn" name="cerrar" type="button" value="Cerrar">
           </div>
-          
-          
           
         </form>
-      </div>
+      
       </section>
       <section id="seccion4" class="section" data-scroll-spy>
         <h2>Deteccion de la camara web</h2>
@@ -248,7 +253,7 @@
           <li class="player">Rust</li>
           <li class="player">Perl</li>
         </ul>
-        <button id="winner-btn">Obtener Ganador</button>
+        <button id="winner-btn" class="btn">Intentar</button>
         <p class="get-ganador"></p>
       </section>
       <section id="seccion7" class="section" data-scroll-spy>
@@ -284,23 +289,26 @@
       </section>
       <section id="seccion9" class="section" data-scroll-spy>
         <h2>Narrador</h2>
-        <select class="input select" id="speech-select" aria-label="narrator">
+        <div class="container-glass glass">
           <option value="">--- Elige una Voz ---</option>
+          <select class="input select" id="speech-select" aria-label="narrator"></select>
         </select>
-        <br><br>
+        
         <textarea class="textarea input" id="speech-text" cols="50" rows="5" placeholder="Ingresa texto para leerlo..."></textarea>
-        <br><br>
-        <button id="speech-btn">Leer texto</button>
+        
+        <button class="btn" id="speech-btn">Leer texto</button>
+        </div>
+        
       </section>
       <section id="seccion10" class="section" data-scroll-spy>
-        <h2>Sección 10</h2>
+        <h2>Cambio Fondo con RGB</h2>
         <!-- -->
         <div class="pulse">💖</div>
-        <div class="contenedor-principal">
-          <div class="contenedor-interno">
+        <div id="bg-rgb" class="container-glass glass">
+          
             <div class="color">
               <label for="red">Rojo (R)</label>
-              <input id="red" type="range" min="0" max="255" value="23" step="1" />
+              <input id="red" type="range" min="0" max="255" value="0" step="1" />
               <p id="texto-rojo"></p>
             </div>
             <div class="color">
@@ -310,25 +318,29 @@
                 type="range"
                 min="0"
                 max="255"
-                value="41"
+                value="0"
                 step="1"
               />
               <p id="texto-verde"></p>
             </div>
             <div class="color">
               <label for="blue">Azul (B)</label>
-              <input id="blue" type="range" min="0" max="255" value="56" step="1" />
+              <input id="blue" type="range" min="0" max="255" value="0" step="1" />
               <p id="texto-azul"></p>
             </div>
+            <div>
+
+            </div>
+            <p id="text-rgb" class="rgb-total"></p><p id="rgbTotal" class="rgb-total"></p>
           </div>
-          <p id="rgbTotal"></p>
-        </div>
+          
+        
       </section>
-      <section id="seccion11" class="section fondo" data-scroll-spy>
+      <section id="seccion11" class="section" data-scroll-spy>
         
         <h2>Validaciones de Formulario</h2>
-        <div class="container-form glass">
-        <form class="contact-form form" target="_blank" action="https://formsubmit.co/nelvissalazar.16@gmail.com" method="POST">
+        <!-- <div class="container-form glass"></div> -->
+        <form class="contact-form container-glass glass" target="_blank" action="https://formsubmit.co/nelvissalazar.16@gmail.com" method="POST">
           <legend>Envíame tus comentarios</legend>
           <input class="input" type="text" name="name" placeholder="Escribe tu nombre" title="Nombre sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" autocomplete="off" required>
           <input class="input" type="email" name="email" placeholder="Escribe tu email" title="Email incorrecto" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,5}" autocomplete="off" required>
@@ -339,11 +351,11 @@
             <img src="assets/rings.svg" alt="Cargando">
           </div>
           <div class="contact-form-response none">
-          <p>Los datos han sido enviados</p>
+            <p>Los datos han sido enviados</p>
           </div>
           
         </form>
-      </div>
+      
       </section>
     </main>
     <button class="scroll-top-btn hidden">&#11014;</button>
