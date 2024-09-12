@@ -26,12 +26,11 @@ html {
 
 body {
   overflow-x: hidden;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 a {
   text-decoration: none;
-  color: var(--color-rosa);
 }
 
 ul {
@@ -47,7 +46,7 @@ h1 {
 }
 
 h2 {
-  font-size: 16px;
+  font-size: 18px;
   margin: 2rem 0;
 }
 
@@ -707,7 +706,7 @@ video {
 
 .footer {
   height: 20vh;
-
+  font-size: 16px;
   text-align: center;
   width: 100%;
   padding: 3rem;
@@ -718,6 +717,7 @@ video {
 .footer small {
   padding: 0.5rem;
   z-index: 100;
+  color: var(--main-color);
 }
 
 /*  EYES MOVE  */
