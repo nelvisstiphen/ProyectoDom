@@ -671,7 +671,6 @@ video {
 
 .contenedor-formas {
   position: fixed;
-  opacity: 0.3;
   width: 100%;
   height: 100vh;
 }
@@ -700,8 +699,23 @@ video {
   border-radius: 7px;
 }
 
-/*  EYES MOVE  */
+.footer {
+  height: 20vh;
 
+  text-align: center;
+  width: 100%;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer small {
+  padding: 0.5rem;
+  z-index: 100;
+}
+
+/*  EYES MOVE  */
+/* 
 .box {
   display: flex;
   position: absolute;
@@ -737,3 +751,4 @@ video {
   border: 10px solid var(--main-color);
   box-sizing: border-box;
 }
+ */
