@@ -2,7 +2,6 @@ import scrollTopBotton from "./boton_scroll.js";
 import slider from "./carrusel.js";
 import cambiosColor from "./color-rgb.js";
 import webCam from "./deteccion_webcam.js";
-//import eyeball from "./eye-move.js";
 import searchFilters from "./filtro_busqueda.js";
 import hamburgerMenu from "./menu_hamburguesa.js";
 import speechReader from "./narrador.js";
@@ -31,7 +30,6 @@ d.addEventListener("DOMContentLoaded", (e) => {
   smartVideo();
   contactFormValidations();
   cambiosColor();
-  //eyeball();
 });
 
 d.addEventListener("keydown", (e) => {

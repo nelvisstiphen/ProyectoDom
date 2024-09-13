@@ -609,15 +609,30 @@ video {
   height: 20vh;
   text-align: center;
   width: 100%;
-  padding: 3rem;
+  height: auto;
+  min-width: 300px;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   font-weight: bold;
+  display: flex;
+
+  align-items: center;
+  flex-direction: column;
+  background-color: #000000e3;
 }
 
-.footer small {
-  padding: 0.5rem;
-  z-index: 100;
+.footer span {
+  margin: 7px 0;
+  color: var(--main-color);
+}
+
+.info p {
+  padding: 0 40px;
+  background: linear-gradient(90deg, var(--main-color), var(--color-rosa));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 /*************    ANIMACIONES    *************/
