@@ -1,9 +1,8 @@
 :root {
   --main-font: sans-serif;
-  --font-size: 16px;
+  --font-size: 14px;
   --main-color: #00dffd;
   --second-color: #000000;
-  --main-modal-color: #00dffd;
   --second-modal-color: rgba(34, 34, 34, 0.85);
   --container-width: 1200px;
   --color-rosa: #f500fd;
@@ -26,15 +25,11 @@ html {
 
 body {
   overflow-x: hidden;
-  font-size: 16px;
+  font-size: var(--font-size);
 }
 
 a {
   text-decoration: none;
-}
-
-ul {
-  padding: 0;
 }
 
 li {
@@ -43,6 +38,7 @@ li {
 
 h1 {
   font-size: 18px;
+  margin: 0 auto;
 }
 
 h2 {
@@ -59,28 +55,43 @@ iframe {
   border-radius: 20px;
 }
 
-::-webkit-scrollbar {
-  width: 0.75em;
-  background-color: black;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-  border-radius: 100vw;
-  /*margin-block: 0.5em;*/
-  margin-inline: 1em;
-}
-
-::-webkit-scrollbar-thumb {
-  background: hsl(192, 100%, 50%);
-  border-radius: 100vw;
-  /* border: 0.12em solid hsl(192, 100%, 50%); */
-}
-
 img {
   max-width: 100%;
   height: auto;
 }
+
+video {
+  width: 100%;
+}
+
+.header {
+  position: sticky;
+  z-index: 997;
+  top: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--main-color);
+  color: var(--second-color);
+  padding: 1rem;
+}
+
+/*  PARENT CONTAINER IN MAIN  */
+
+.section {
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: var(--container-width);
+  min-height: 100vh;
+  position: relative;
+  text-align: center;
+}
+
+/*************  GENERAL BUTTONS  *************/
 
 .input {
   border-radius: 7px;
@@ -114,7 +125,7 @@ img {
   margin: 0.3rem;
 }
 
-/*  FORM GLASS  */
+/*************  GLASS CONTAINER  *************/
 
 .container-glass {
   display: flex;
@@ -141,34 +152,7 @@ img {
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
-.header {
-  position: sticky;
-  z-index: 997;
-  top: 0;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: var(--main-color);
-  color: var(--second-color);
-  padding: 1rem;
-}
-
-.header h1 {
-  margin: 0 auto;
-}
-
-.section {
-  padding: 4rem 2rem;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  max-width: var(--container-width);
-  min-height: 100vh;
-  position: relative;
-  text-align: center;
-}
+/*************  MENU  *************/
 
 .panel {
   position: fixed;
@@ -228,7 +212,7 @@ img {
 
 .menu a:hover {
   color: var(--second-color);
-  background-color: var(--main-modal-color);
+  background-color: var(--main-color);
 }
 
 /******** CLOCK AND ALARM ********/
@@ -244,7 +228,7 @@ img {
   color: var(--color-rosa);
 }
 
-/************  Eventos del Teclado  ************/
+/************  keyboard events  ************/
 
 .stage {
   display: flex;
@@ -318,40 +302,6 @@ img {
   color: var(--main-color);
 }
 
-/*  FONDO ANIMADO  */
-
-/* .container-bg {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.bubbles {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.bubbles span {
-  border-radius: 100%;
-  background-color: none;
-  box-shadow: 0 0 10px #222222, 0 0 50px red, 0 0 100px red;
-  animation: animate 15s linear infinite;
-  animation-duration: calc(125s / var(--i));
-}
-
-@keyframes animate {
-  0% {
-    transform: translateY(100vh) scale(0);
-  }
-  100% {
-    transform: translateY(-10vh) scale(2);
-  }
-}
- */
-
 /************  Search Filters  ************/
 
 .cards {
@@ -382,16 +332,47 @@ img {
 }
 
 .filter {
-  /* display: none; */
   visibility: hidden;
   opacity: 0;
   order: 1;
 }
 
+/*************  EXTRAS  ***************/
+
 .get-winner {
   color: #3bfd00;
   height: 7px;
   margin: 7px;
+}
+
+.pulse {
+  font-size: 70px;
+  animation: pulse 1s linear infinite;
+}
+
+.rgb-total {
+  padding: 1rem;
+  font-weight: bold;
+  width: 100%;
+  border-radius: 7px;
+}
+
+/*  SCROLL  */
+
+::-webkit-scrollbar {
+  width: 0.75em;
+  background-color: black;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 100vw;
+  margin-inline: 1em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(192, 100%, 50%);
+  border-radius: 100vw;
 }
 
 /********** Responsive Slider ***********/
@@ -517,10 +498,6 @@ img {
   }
 }
 
-video {
-  width: 100%;
-}
-
 /******** ContactForm Validations ********/
 
 .contact-form {
@@ -569,18 +546,15 @@ video {
   display: none;
 }
 
-@keyframes show-message {
-  0% {
-    visibility: hidden;
-    opacity: 0;
-  }
-  100% {
-    visibility: visible;
-    opacity: 1;
-  }
+/******** ANIMATED SHAPES ********/
+
+.container-shapes {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
 }
 
-.cuadro {
+.shape {
   position: absolute;
   width: 100px;
   height: 100px;
@@ -589,7 +563,7 @@ video {
   z-index: -5;
 }
 
-.cuadro1 {
+.shape1 {
   border-left: 70px solid transparent;
   border-right: 70px solid transparent;
   border-bottom: 140px solid #3bfd00;
@@ -597,7 +571,7 @@ video {
   left: 50%;
   animation: forma1 50s linear infinite both;
 }
-.cuadro2 {
+.shape2 {
   width: 150px;
   height: 150px;
   background-color: #ff7300;
@@ -606,13 +580,70 @@ video {
   left: 10%;
   animation: forma2 8s linear infinite both;
 }
-.cuadro3 {
+.shape3 {
   width: 130px;
   height: 130px;
   background-color: #3bfd00;
   top: 70%;
   left: 20%;
   animation: forma3 40s linear infinite both;
+}
+
+.container-shapes p {
+  color: var(--color-rosa);
+  top: 300px;
+  margin: auto;
+  position: absolute;
+  opacity: 0.3;
+  transform: rotate(270deg);
+  font-size: 120px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  animation: mor 12s linear infinite both;
+  text-shadow: 7px 7px 7px var(--main-color);
+}
+
+/*************   FOOTER   *************/
+
+.footer {
+  height: 20vh;
+  text-align: center;
+  width: 100%;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.footer small {
+  padding: 0.5rem;
+  z-index: 100;
+}
+
+/*************    ANIMACIONES    *************/
+
+@keyframes mor {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes forma1 {
@@ -654,114 +685,13 @@ video {
   }
 }
 
-.contenedor-formas {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-}
-
-.contenedor-formas p {
-  color: var(--color-rosa);
-  top: 300px;
-
-  margin: auto;
-  position: absolute;
-  opacity: 0.3;
-  transform: rotate(270deg);
-  font-size: 120px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-weight: bold;
-  animation: mor 12s linear infinite both;
-  text-shadow: 7px 7px 7px var(--main-color);
-}
-
-@keyframes mor {
+@keyframes show-message {
   0% {
+    visibility: hidden;
     opacity: 0;
   }
-  50% {
+  100% {
+    visibility: visible;
     opacity: 1;
   }
-  100% {
-    opacity: 0;
-  }
 }
-
-@keyframes pulse {
-  0% {
-    transform: scale(1.1);
-  }
-  50% {
-    transform: scale(0.8);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-.pulse {
-  font-size: 70px;
-  animation: pulse 1s linear infinite;
-}
-
-.rgb-total {
-  padding: 1rem;
-  font-weight: bold;
-  width: 100%;
-  border-radius: 7px;
-}
-
-.footer {
-  height: 20vh;
-  font-size: 16px;
-  text-align: center;
-  width: 100%;
-  padding: 3rem;
-  display: flex;
-  flex-direction: column;
-  font-weight: bold;
-}
-
-.footer small {
-  padding: 0.5rem;
-  z-index: 100;
-}
-
-/*  EYES MOVE  */
-/* 
-.box {
-  display: flex;
-  position: absolute;
-  top: 10%;
-  opacity: 0.2;
-  width: 100%;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-}
-
-.eye {
-  position: relative;
-  width: 120px;
-  height: 120px;
-  display: block;
-  background-color: white;
-  margin: 0 20px;
-  border-radius: 50%;
-  box-shadow: 0 5px 45px rgba(0, 0, 0, 0.2);
-}
-
-.eye::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 35px;
-  transform: translate(-50%, -50%);
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  background-color: black;
-  border: 10px solid var(--main-color);
-  box-sizing: border-box;
-}
- */
