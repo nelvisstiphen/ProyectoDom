@@ -30,6 +30,7 @@ body {
 
 a {
   text-decoration: none;
+  color: white;
 }
 
 li {
@@ -618,7 +619,7 @@ video {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #000000ee;
+  background-color: #000000e5;
 
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
