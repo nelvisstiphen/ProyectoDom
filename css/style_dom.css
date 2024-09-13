@@ -618,7 +618,7 @@ video {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #000000d5;
+  background-color: #000000ee;
 
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
