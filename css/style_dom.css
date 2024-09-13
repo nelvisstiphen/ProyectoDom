@@ -672,6 +672,7 @@ video {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-weight: bold;
   animation: mor 12s linear infinite both;
+  text-shadow: 7px 7px 7px var(--main-color);
 }
 
 @keyframes mor {
