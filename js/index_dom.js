@@ -3,6 +3,7 @@ import slider from "./carrusel.js";
 import cambiosColor from "./color-rgb.js";
 import webCam from "./deteccion_webcam.js";
 import searchFilters from "./filtro_busqueda.js";
+import guardarId from "./guardarId.js";
 import hamburgerMenu from "./menu_hamburguesa.js";
 import speechReader from "./narrador.js";
 import responsiveTester from "./prueba_responsive.js";
@@ -12,6 +13,7 @@ import draw from "./sorteo.js";
 import { moveBall, shortcuts } from "./teclado.js";
 import darkTheme from "./tema_oscuro.js";
 import todoList from "./todoList.js";
+
 import contactFormValidations from "./validaciones_formulario.js";
 import smartVideo from "./video_inteligente.js";
 
@@ -32,6 +34,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
   contactFormValidations();
   cambiosColor();
   todoList();
+  guardarId();
 });
 
 d.addEventListener("keydown", (e) => {

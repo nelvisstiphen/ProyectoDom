@@ -35,7 +35,7 @@
   
   <header class="header">
     <span>😎💖</span>
-    <h1>Manejo del Dom</h1>
+    <h1></h1>
     <span>💕😊</span>
   </header>
 
@@ -80,14 +80,24 @@
             <button class="btn" id="desactivar-alarma">Detener Alarma</button>
           </div>
         </div>
-        <div class="container-todo-list container-glass glass">
+        </div>
+        <div class="container-glass glass">
+          <h3>Agregar Usuarios</h3>
+          <input class="input" type="text" id="input-nombre" placeholder="Nombre">
+        <input class="input" type="text" id="input-apellido" placeholder="Apellido">
+        <button id="btn-obj" class="btn">Agregar</button>
+        <ul id="lista-obj"></ul>
+        </div>
+        <div class="container-glass glass">
+          <h3>Agregar Tareas</h3>
           <input type="text" id="input-task" class="input" placeholder="Ingresa nueva tarea">
-          <button id="btn-add-task" class="btn">Agregar Tarea</button>
+          <button id="btn-add-task" class="btn">Agregar</button>
           <p id="error-task" class="none-error">Por favor escribe por lo menos un caracter</p>
           <ul id="list-task" class="list-task">
 
           </ul>
-        </div>
+        
+        
       </section>
 
       <section id="seccion2" class="section" data-scroll-spy>
@@ -97,12 +107,12 @@
         </article>
         <div class="container-btn-ball">
           <div>
-            <button id="btn-up" class="btn btn-ball">SUBIR</button>
+            <button id="btn-up" class="btn btn-ball">Subir</button>
           </div>
           <div>
-            <button id="btn-left" class="btn btn-ball">IZQUIERDA</button>
-          <button id="btn-down" class="btn btn-ball">ABAJO</button>
-          <button id="btn-right" class="btn btn-ball">DERECHA</button>
+            <button id="btn-left" class="btn btn-ball">Izquierda</button>
+          <button id="btn-down" class="btn btn-ball">Abajo</button>
+          <button id="btn-right" class="btn btn-ball">Derecha</button>
           </div>
         </div>
         
@@ -122,7 +132,6 @@
 
       <section id="seccion4" class="section" data-scroll-spy>
         <h2>Detección de la cámara web</h2>
-        <video ></video>
         <video id="webcam" controls>
           <track src="captions_es.vtt" kind="captions" srclang="es" label="spanish_captions">
       </video>
@@ -254,7 +263,7 @@
       </section>
 
       <section id="seccion10" class="section" data-scroll-spy>
-        <h2>Cambio Fondo con RGB</h2>
+        <h2>Cambio Color con RGB</h2>
         <div class="pulse">💖</div>
         <div id="bg-rgb" class="container-glass glass">
           <div class="color">
