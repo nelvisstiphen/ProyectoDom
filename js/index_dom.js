@@ -11,6 +11,7 @@ import scrollSpy from "./scroll_espia.js";
 import draw from "./sorteo.js";
 import { moveBall, shortcuts } from "./teclado.js";
 import darkTheme from "./tema_oscuro.js";
+import todoList from "./todoList.js";
 import contactFormValidations from "./validaciones_formulario.js";
 import smartVideo from "./video_inteligente.js";
 
@@ -30,6 +31,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
   smartVideo();
   contactFormValidations();
   cambiosColor();
+  todoList();
 });
 
 d.addEventListener("keydown", (e) => {

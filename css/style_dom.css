@@ -713,3 +713,49 @@ video {
     opacity: 1;
   }
 }
+
+.container-todo-list {
+  margin-top: 30px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-todo-list p {
+  padding: 7px 12px;
+  background-color: #000;
+  color: red;
+  border: 1px solid red;
+  border-radius: 7px;
+}
+
+.none-error {
+  display: none;
+}
+
+.new-task {
+  padding: 17px;
+  min-width: 300px;
+  border-radius: 7px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: var(--color-rosa);
+  border: 1px solid var(--second-color);
+  box-shadow: 1px 1px 7px var(--color-rosa);
+  margin-top: 10px;
+}
+
+.btn-delete {
+  background-color: red;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 7px;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
