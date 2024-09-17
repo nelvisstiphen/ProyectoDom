@@ -33,7 +33,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
   smartVideo();
   contactFormValidations();
   cambiosColor();
-  todoList();
+
   guardarId();
 });
 
@@ -44,3 +44,4 @@ d.addEventListener("keydown", (e) => {
 
 darkTheme(".dark-theme-btn", "dark-mode");
 speechReader();
+todoList();

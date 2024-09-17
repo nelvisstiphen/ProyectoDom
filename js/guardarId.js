@@ -4,22 +4,40 @@ export default function guardarId() {
   const inputApellido = document.getElementById("input-apellido");
   const btnObj = document.getElementById("btn-obj");
   const listaObj = document.getElementById("lista-obj");
+  const inputTaskUser = document.getElementById("input-task-user");
   //Variables
   const usuarios = [];
   let id = 0;
   //Asignando boton para recibir datos de inputs
   btnObj.addEventListener("click", (e) => {
+    if (inputNombre.value === "" || inputApellido.value === "") {
+      return;
+    }
     // Creando nuevo elemento li
     let nuevaLista = document.createElement("li");
     nuevaLista.classList.add("new-task");
     //Agregando contenido saludo a la li
-    nuevaLista.textContent = `${inputNombre.value} ${inputApellido.value}`;
+
+    let nombre = document.createElement("p");
+    nombre.textContent = `${inputNombre.value} ${inputApellido.value}`;
+    nuevaLista.appendChild(nombre);
     listaObj.appendChild(nuevaLista);
 
+    let btnAddTask = document.createElement("button");
+    btnAddTask.textContent = "Agregar Tarea";
+    btnAddTask.classList.add("btn-add-task");
+    btnAddTask.onclick = function () {};
+
+    let tareas = document.createElement("p");
+    tareas.textContent = `${inputTaskUser.value}`;
+    tareas.classList.add("text-task");
+    nuevaLista.appendChild(tareas);
+    nuevaLista.appendChild(btnAddTask);
+    //Agregando boton eliminar
     let btnDeleteUser = document.createElement("button");
     btnDeleteUser.textContent = "Eliminar";
     btnDeleteUser.classList.add("btn-delete");
-
+    //Funcion que elimina el li del usuario
     btnDeleteUser.onclick = function () {
       nuevaLista.remove();
     };
@@ -41,7 +59,12 @@ export default function guardarId() {
     //console.log(usuarios);
     document.getElementById("input-nombre").value = "";
     document.getElementById("input-apellido").value = "";
+    document.getElementById("input-task-user").value = "";
   }
+}
+
+function addTask() {
+  console.log("Hola");
 }
 
 /* 

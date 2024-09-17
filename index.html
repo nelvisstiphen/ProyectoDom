@@ -83,16 +83,17 @@
         </div>
         <div class="container-glass glass">
           <h3>Agregar Usuarios</h3>
-          <input class="input" type="text" id="input-nombre" placeholder="Nombre">
-        <input class="input" type="text" id="input-apellido" placeholder="Apellido">
-        <button id="btn-obj" class="btn">Agregar</button>
+          <input class="input" type="text" id="input-nombre" placeholder="Nombre" required>
+          <input class="input" type="text" id="input-apellido" placeholder="Apellido" required>
+          <input type="text" id="input-task-user" class="input" placeholder="Ingresa nueva tarea" required>
+          <button id="btn-obj" class="btn">Agregar</button>
         <ul id="lista-obj"></ul>
         </div>
         <div class="container-glass glass">
           <h3>Agregar Tareas</h3>
           <input type="text" id="input-task" class="input" placeholder="Ingresa nueva tarea">
           <button id="btn-add-task" class="btn">Agregar</button>
-          <p id="error-task" class="none-error">Por favor escribe por lo menos un caracter</p>
+
           <ul id="list-task" class="list-task">
 
           </ul>
