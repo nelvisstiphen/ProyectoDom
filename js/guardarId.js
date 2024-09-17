@@ -1,7 +1,7 @@
 export default function guardarId() {
   //Variables del DOM
   const inputNombre = document.getElementById("input-nombre");
-  const inputApellido = document.getElementById("input-apellido");
+  //const inputApellido = document.getElementById("input-apellido");
   const btnObj = document.getElementById("btn-obj");
   const listaObj = document.getElementById("lista-obj");
   const inputTaskUser = document.getElementById("input-task-user");
@@ -10,7 +10,7 @@ export default function guardarId() {
   let id = 0;
   //Asignando boton para recibir datos de inputs
   btnObj.addEventListener("click", (e) => {
-    if (inputNombre.value === "" || inputApellido.value === "") {
+    if (inputNombre.value === "") {
       return;
     }
     // Creando nuevo elemento li
@@ -19,20 +19,22 @@ export default function guardarId() {
     //Agregando contenido saludo a la li
 
     let nombre = document.createElement("p");
-    nombre.textContent = `${inputNombre.value} ${inputApellido.value}`;
+    nombre.textContent = inputNombre.value;
     nuevaLista.appendChild(nombre);
     listaObj.appendChild(nuevaLista);
 
-    let btnAddTask = document.createElement("button");
+    /*  let btnAddTask = document.createElement("button");
     btnAddTask.textContent = "Agregar Tarea";
     btnAddTask.classList.add("btn-add-task");
-    btnAddTask.onclick = function () {};
+    btnAddTask.onclick = function () {}; 
+    nuevaLista.appendChild(btnAddTask);
+    */
 
     let tareas = document.createElement("p");
     tareas.textContent = `${inputTaskUser.value}`;
     tareas.classList.add("text-task");
     nuevaLista.appendChild(tareas);
-    nuevaLista.appendChild(btnAddTask);
+
     //Agregando boton eliminar
     let btnDeleteUser = document.createElement("button");
     btnDeleteUser.textContent = "Eliminar";
@@ -43,10 +45,12 @@ export default function guardarId() {
     };
     nuevaLista.appendChild(btnDeleteUser);
     //Llamando función y enviando parámetros id, nombre y apellido al objeto
-    generadoraObj(id, inputNombre.value, inputApellido.value);
+    //generadoraObj(id, inputNombre.value, inputApellido.value);
     //Aumentando 1 al id
     id++;
-    console.log(usuarios);
+    document.getElementById("input-nombre").value = "";
+    //document.getElementById("input-apellido").value = "";
+    document.getElementById("input-task-user").value = "";
   });
   //Funcion creadora de objeto de id, nombre y apellido
   function generadoraObj(id, nombre, apellido) {
@@ -57,14 +61,7 @@ export default function guardarId() {
     };
     usuarios.push(objeto);
     //console.log(usuarios);
-    document.getElementById("input-nombre").value = "";
-    document.getElementById("input-apellido").value = "";
-    document.getElementById("input-task-user").value = "";
   }
-}
-
-function addTask() {
-  console.log("Hola");
 }
 
 /* 
