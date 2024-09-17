@@ -726,7 +726,7 @@ video {
   padding: 0 17px;
   min-width: 300px;
   min-height: 100px;
-  width: 80%;
+
   border-radius: 7px;
   font-weight: bold;
   display: flex;
@@ -752,14 +752,14 @@ video {
   border: none;
   cursor: pointer;
 
-  width: 130px;
+  width: 100px;
 }
 
 .btn-delete {
   background-color: red;
   color: white;
   padding: 4px;
-  width: 100px;
+  width: 80px;
   border-radius: 7px;
   border: none;
   cursor: pointer;
