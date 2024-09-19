@@ -769,3 +769,8 @@ video {
   width: 40%;
   color: #00dffd;
 }
+
+.cards-template {
+  height: auto;
+  width: 100%;
+}

@@ -12,6 +12,7 @@ import scrollSpy from "./scroll_espia.js";
 import draw from "./sorteo.js";
 import { moveBall, shortcuts } from "./teclado.js";
 import darkTheme from "./tema_oscuro.js";
+import template from "./template.js";
 import todoList from "./todoList.js";
 
 import contactFormValidations from "./validaciones_formulario.js";
@@ -28,6 +29,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
   webCam("webcam");
   searchFilters(".card-filter", ".card");
   draw("#winner-btn", ".player");
+  template();
   slider();
   scrollSpy();
   smartVideo();

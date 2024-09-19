@@ -224,11 +224,11 @@
       <section id="seccion7" class="section" data-scroll-spy>
         <h2>Responsive Slider</h2>
         <div class="slider">
-          <div class="slider-slides">
+          <div class="slider-slides" id="cards">
             <div class="slider-slide active">
               <img width="500px" height="500px" src="./assets/vengadores1.webp" alt="vengadores 1">
             </div>
-            <div class="slider-slide">
+            <!-- <div class="slider-slide">
               <img width="500px" height="500px" src="./assets/vengadores2.webp" alt="vengadores 2">
             </div>
             <div class="slider-slide">
@@ -236,8 +236,12 @@
             </div>
             <div class="slider-slide">
               <img width="500px" height="500px" src="./assets/vengadores4.webp" alt="vengadores 4">
-            </div>
-          </div>
+            </div>   -->
+            <template id="template-card">
+              <div class="slider-slide">
+                <img width="500px" height="500px">
+              </div>
+            </template>
           <div class="slider-btns">
             <a class="prev" href="#">&laquo;</a>
             <a class="next" href="#">&raquo;</a>
@@ -260,6 +264,13 @@
           </select>
           <textarea class="textarea input" id="speech-text" cols="50" rows="5" placeholder="Ingresa texto para leerlo..."></textarea>
           <button class="btn" id="speech-btn">Leer texto</button>
+        </div>
+        <!-- <div id="cards" class="cards-template">
+          <template id="template-card">
+              
+            <img width="500px" height="500px" src="./assets/vengadores2.webp" alt="vengadores 2">
+            
+          </template> -->
         </div>
       </section>
 

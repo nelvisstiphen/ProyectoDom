@@ -6,7 +6,7 @@ export default function slider() {
   const $slides = d.querySelectorAll(".slider-slide");
 
   let i = 0;
-
+  console.log($slides);
   function agregar(index) {
     $slides[index].classList.add("active");
   }
